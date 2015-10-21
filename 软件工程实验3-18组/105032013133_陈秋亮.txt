@@ -1,0 +1,155 @@
+源代码1：
+package p1;
+
+
+public class rect implements shape{
+double l;
+double w;
+public double area() {
+	// TODO Auto-generated method stub
+	return l*w;
+}
+public String abc()
+{
+	return "l";
+	}
+public double perimeter() {
+	// TODO Auto-generated method stub
+	return 2*(l+w);
+}
+public rect(double a,double b){
+	l=a;
+	w=b;
+}
+}
+测试代码：
+package p1;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class test {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+
+	public <area> test() {
+		rect a=new rect(2,3);
+	assertEquals(6,(int)a.area());
+	}
+
+	
+
+}
+
+
+
+
+
+
+
+
+源代码2：
+public class MyMath
+{
+
+public double oneEquation(double a,double b)
+{
+  if(a==0)
+  {
+   System.out.println("参数错误");
+   throw new ArithmeticException("参数错误");
+  }
+  else
+  {
+   System.out.println("一元一次方程有解");
+   return -b/a;
+  }
+}
+
+public double[] twoEquation(double a,double b,double c)
+{
+  double[] result;
+  if(a==0)
+  {
+   System.out.println("****************************");  
+   throw new ArithmeticException("参数错误");
+  }
+  else if(b*b-4*a*c<0)
+  {
+   System.out.println("****************************");  
+   throw new ArithmeticException("方程在理数范围内无解");
+  }
+  else if(b*b-4*a*c==0)
+  {
+   System.out.println("****************************");  
+   System.out.println("方程存在唯一的解");
+   result=new double[1];
+   result[0]=-b/(2*a);
+   return result;
+  }
+  else
+  {
+   System.out.println("****************************");
+   System.out.println("方程存在两个解");
+   result=new double[2];
+   result[0]=(-b+Math.sqrt(b*b-4*a*c))/2/a;
+   result[1]=(-b-Math.sqrt(b*b-4*a*c))/2/a;
+   return result;
+  }
+}
+}
+
+}  
+测试代码：
+
+package junittest;
+import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.JUnitCore;
+public class MyMathTest
+{
+@Before
+public void setUp()
+{
+  math=new MyMath();
+}
+@After
+public void tearDown()
+{
+  math=null;
+}
+@Test(expected=ArithmeticException.class)
+public void testOneEquation()
+{
+  System.out.println("=================================");  
+  System.out.println("=================================");
+        System.out.println("测试一元一次方程求解");
+  //断言该方程求解应该为-1.8
+  assertEquals(math.oneEquation(5,9),-1.8,.00001);
+  //断言当a==0时的情况
+  assertEquals(math.oneEquation(0,3),-1);
+}
+@Test
+public void testTwoEquation()
+{
+  System.out.println("=================================");  
+  System.out.println("=================================");
+        System.out.println("测试一元二次方程求解");  
+  double[] tmp=math.twoEquation(1,-3,2);
+  assertEquals("第一个解出错",tmp[0],2,.00001);
+  assertEquals("第二个解出错",tmp[1],3,.00001);
+}
+}
+ 

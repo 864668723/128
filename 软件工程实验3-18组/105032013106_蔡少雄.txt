@@ -1,0 +1,97 @@
+源代码：
+public class Money { 
+private int fAmount;//余额 
+private String fCurrency;//货币类型 
+
+public Money(int amount, String currency) { 
+fAmount= amount; 
+fCurrency= currency; 
+} 
+
+public int amount() { 
+return fAmount; 
+} 
+
+public String currency() { 
+return fCurrency; 
+} 
+
+public Money add(Money m) {//加钱 
+return new Money(amount()+m.amount(), currency()); 
+} 
+
+public boolean equals(Object anObject) {//判断钱数是否相等 
+if (anObject instanceof Money) { 
+Money aMoney= (Money)anObject; 
+return aMoney.currency().equals(currency()) 
+&& amount() == aMoney.amount(); 
+} 
+return false; 
+} 
+} 
+测试代码1：
+package p1;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class test {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test() {
+		class  MoneyTest extends test { //TestCase的子类 
+			public void testEquals() { //把测试代码放在testEquals中 
+			Money m12CHF= new Money(12, "CHF"); //本行和下一行进行一些初始化 
+			Money m14CHF= new Money(14, "CHF"); 
+
+			assertTrue(!m12CHF.equals(null));//进行不同情况的测试 
+			assertEquals(m12CHF, m12CHF); 
+			assertEquals(m12CHF, new Money(12, "CHF")); // (1) 
+			assertTrue(!m12CHF.equals(m14CHF)); 
+	}
+
+		}
+	}
+}
+测试代码2：package p1;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class test {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test() {
+		class  MoneyTest extends test { //TestCase的子类 
+			public void testAdd() { //把测试代码放在testAdd中 
+				Money m12CHF= new Money(12, "CHF"); //本行和下一行进行一些初始化 
+				Money m14CHF= new Money(14, "CHF"); 
+				Money expected= new Money(26, "CHF");//预期的结果 
+				Money result= m12CHF.add(m14CHF); //运行被测试的方法 
+				assertTrue(expected.equals(result)); //判断运行结果是否与预期的相同 
+				} 
+				} 
+}
+}

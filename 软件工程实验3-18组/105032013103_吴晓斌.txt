@@ -1,0 +1,73 @@
+源代码：
+/**
+ * 
+ */
+package P1;
+
+/**
+ * @author Administrator
+ *
+ */
+public class student {
+	String number;
+	String name;
+	String sex;
+	
+	
+	public String getNumber() {
+		return number;
+	}
+	public void setNumber(String number) {
+		this.number = number;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public void tostring()
+	{System.out.println("学号"+number+"姓名"+name+"性别"+sex);}
+	public student(String number,String name,String sex)
+	{this.number=number;this.name=name;this.sex=sex;}
+	public void change(String number,String name,String sex)
+	{this.number=number;this.name=name;this.sex=sex;}
+    public boolean compare(String number)
+    {if(this.number.equals(number))
+    	{return true;}
+    else return false;}
+}
+测试代码：
+package P1;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class studentTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test() {
+		student s1=new student("105032013132","小平","男");
+		s1.setName("小平");
+		assertEquals("小平", s1.getName());
+		
+	}
+
+}

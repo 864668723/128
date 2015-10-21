@@ -1,0 +1,51 @@
+源代码：
+package p1;
+
+public class Rectangle implements Shape {
+
+	double x,y;
+	public Rectangle(double a,double b){
+	x=a;
+	y=b;
+	}
+	public double area()//实现接口中的抽象方法，求长方形面积
+	{
+	return x * y;
+	}
+	public double length()
+	{return 2*(x+y);}
+	public String toString()
+	{
+	return "123";
+	
+	}
+	}
+测试代码：
+package p1;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class shapetest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test() {
+		Rectangle a=new Rectangle(2,3);
+		a.toString();
+		assertEquals("123", a.toString());
+	
+	}
+
+	
+}

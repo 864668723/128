@@ -1,0 +1,28 @@
+Ô´´úÂë£º
+package com.myhome.test;  
+  
+import junit.framework.TestCase;  
+  
+public class MulTest extends TestCase {  
+  
+    public void testMul() {  
+        fail("Not yet implemented");  
+    }  
+  
+    public void testDivide() {  
+        fail("Not yet implemented");  
+    }  
+  
+} 
+²âÊÔ´úÂë£º
+public void testMul() {  
+    Mul mul = new Mul();  
+    int res = mul.mul(2, 4);  
+    System.out.println(res);  
+}  
+  
+public void testDivide() {  
+    Mul mul = new Mul();  
+    double res = mul.divide(8.0, 2.0);  
+    assertEquals(4.0, res);  
+} 
