@@ -1,0 +1,7 @@
+D:\Studio 2\C#\workspace\Client\Client\bin\Debug\Client.exe.config
+D:\Studio 2\C#\workspace\Client\Client\bin\Debug\Client.exe
+D:\Studio 2\C#\workspace\Client\Client\bin\Debug\Client.pdb
+D:\Studio 2\C#\workspace\Client\Client\obj\Debug\Client.Properties.Resources.resources
+D:\Studio 2\C#\workspace\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+D:\Studio 2\C#\workspace\Client\Client\obj\Debug\Client.exe
+D:\Studio 2\C#\workspace\Client\Client\obj\Debug\Client.pdb

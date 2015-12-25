@@ -1,0 +1,13 @@
+D:\Studio 2\C#\workspace\Server\Server\bin\Debug\Server.exe.config
+D:\Studio 2\C#\workspace\Server\Server\bin\Debug\Server.exe.manifest
+D:\Studio 2\C#\workspace\Server\Server\bin\Debug\Server.application
+D:\Studio 2\C#\workspace\Server\Server\bin\Debug\Server.exe
+D:\Studio 2\C#\workspace\Server\Server\bin\Debug\Server.pdb
+D:\Studio 2\C#\workspace\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\Studio 2\C#\workspace\Server\Server\obj\Debug\FileTransfer.FileTransferForm.resources
+D:\Studio 2\C#\workspace\Server\Server\obj\Debug\Server.Properties.Resources.resources
+D:\Studio 2\C#\workspace\Server\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+D:\Studio 2\C#\workspace\Server\Server\obj\Debug\Server.exe.manifest
+D:\Studio 2\C#\workspace\Server\Server\obj\Debug\Server.application
+D:\Studio 2\C#\workspace\Server\Server\obj\Debug\Server.exe
+D:\Studio 2\C#\workspace\Server\Server\obj\Debug\Server.pdb
